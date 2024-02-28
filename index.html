@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ez egy űrlap.">
+    <meta name="keywords" content="HTML, CSS, Űrlap">
+    <meta name="author" content="Szabó Roland">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Szabó Roland - C űrlap</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset class="mezok">
+            <legend>Dolgozat</legend>
+            <p class="mez"><label for="m1">Felhasználónév: </label> <input class="mez" type="text" id="m1" name="felhsz" pattern="^[A-Za-z][0-9]{5,6}[A-Za-z]$"></p>
+            <p class="mez"><label for="m2">Jelszó: </label>         <input class="mez" type="text" id="m2" name="jelsz" pattern=".{7,}[^a-zA-Z0-9öüóőúéáűí]$"></p>
+            <p class="mez"><label for="m3">E-mail cím: </label>     <input class="mez" type="text" id="m3" name="email" pattern="[A-Za-z0-9]*@[A-Za-z0-9]*\.[A-Za-z0-9]*"></p>
+        </fieldset>
+        <fieldset class="adatok">
+            <legend>Adatok</legend>
+            <fieldset class="kedv">
+                <legend class="kedve">Kedvencek</legend>
+                <div>
+                    <p class="but"><input type="checkbox" name="film" id="kchk1"><label for="kchk1">Film</label></p>
+                    <p class="but"><input type="checkbox" name="vidjatek" id="kchk2"><label for="kchk2">Videó-játékok</label></p>
+                    <p class="but"><input type="checkbox" name="olvasas" id="kchk3"><label for="kchk3">Olvasás</label></p>
+                    <p class="but"><input type="checkbox" name="seta" id="kchk4"><label for="kchk4">Séta</label></p>
+                </div>
+                <div>
+                    <p class="but"><input type="radio" name="kr" id="kr1"><label for="kr1">Csoport Munka</label></p>
+                    <p class="but"><input type="radio" name="kr" id="kr2"><label for="kr2">Egyéni Munka</label></p>
+                    <p class="but"><input type="radio" name="kr" id="kr3"><label for="kr3">Bármelyik</label></p>
+                </div>
+            </fieldset>
+        </fieldset>
+        <input class="sub" type="submit" value="Küldés">
+    </form>
+</body>
+</html>
